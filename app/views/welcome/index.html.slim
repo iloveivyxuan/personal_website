@@ -1,0 +1,64 @@
+.letters
+  | Design & Program
+.banner
+  .next.next-1
+    = fa_icon 'chevron-down', class: "icon-down"
+  .arrows
+    = fa_icon 'chevron-left', class: "icon-left"
+    = fa_icon 'chevron-right', class: "icon-right"
+  .logo
+    span.pink
+      | Ivy
+    span.dark
+      | Xuan
+  = render 'components/nav'
+.screen-two
+  .title
+    | About Me
+  .paragraph.paragraph-1
+    | 我叫瑄瑄，是中国传媒大学大二的学生，
+    br
+    | 平时会做一些前端、设计、发呆和思考人生的工作，
+  .icons
+    = image_tag 'icon-1'
+    = image_tag 'icon-2'
+    = image_tag 'icon-3'
+    = image_tag 'icon-4'
+  .paragraph.paragraph-2
+    | 这是我的个人网站，上面会放一些我的个人作品和一些文字什么的。
+    br
+    |没有啦，就这些，么么哒
+    br
+    |［比心］
+    br
+    |［再比一个心］
+  .next.next-2
+    = fa_icon 'chevron-down'
+.screen-three
+  .title
+    | contact
+  .paragraph
+    | 联系方式这里呢
+    br
+    | 嗯……放一个邮箱……
+    br
+    |［比心］one more time [比心]
+  .email
+    = fa_icon 'envelope-o', class: "icon-env"
+    | iloveivyxuan@gmail.com
+.footer
+  | © iloveivyxuan
+
+coffee:
+  $('.next').on 'click', (e) ->
+    $('body').css 'transform', 'translate(0, -100vh)'
+  $('.next.next-2').on 'click', (e) ->
+    $('body').css 'transform', 'translate(0, -200vh)'
+
+
+  
+
+
+
+
+

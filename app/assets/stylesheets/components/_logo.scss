@@ -1,0 +1,23 @@
+.logo {
+	font-size: 26px;
+	line-height: 38px;
+	padding: 54px 18px 288px;
+	border: $line solid #fafafa;
+	display: inline-block;
+	margin-left: 70px;
+	position: relative;
+	top: -$line;
+
+	.pink {
+		color: $pink;
+	}
+
+	.dark {
+		color: $dark_letters;
+	}
+
+	&.page_name {
+		border: none;
+		padding: 54px 18px 54px;
+	}
+}

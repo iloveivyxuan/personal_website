@@ -1,0 +1,13 @@
+.nav
+  = link_to root_path, class:"item #{controller_name == "welcome" ? 'active' : ''}"
+    | Home
+  = link_to photographs_path, class:"item #{controller_name == "words" ? 'active' : ''}"
+    | Words
+  = link_to photographs_path, class:"item #{controller_name == "photographs" ? 'active' : ''}"
+    | Photograph
+  .item
+    | Design
+  .item
+    | Program
+  .item
+    | Others

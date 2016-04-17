@@ -1,0 +1,162 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.welcome {
+	transition: 1s;
+	.letters {
+		color: $pink;
+		font-size: 100px;
+		position: absolute;
+		top: calc(100vh - 190px);
+		left: 380px;
+		width: 900px;
+	}
+	.banner {
+		width: 100%;
+		height: 100vh;
+		background-image: asset-url('banner-1.jpg');
+		background-position: 80% 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.arrows {
+		background-color: rgba(255, 255, 255, 0.6);
+		width: 180px;
+		height: 90px;
+		position: absolute;
+		top: 180px;
+		font-size: 26px;
+		line-height: 90px;
+		color: $pink;
+		z-index: 999;
+		.icon-left {
+			margin-right: 38px;
+			margin-left: 54px;
+		}
+	}
+
+	.next-1 {
+		background-color: $pink;
+		width: 260px;
+		height: 90px;
+		position: absolute;
+		display: inline-block;
+		top: calc(100vh - 90px);
+		left: 180px;
+		font-size: 26px;
+		color: $white;
+		line-height: 90px;
+		z-index: 999;
+		text-align: center;
+		&:hover {
+			background-color: $light_pink;
+		}
+	}
+
+	.screen-two {
+		width: 100%;
+		height: 100vh;
+		background-color: $pink;
+		color: $white;
+		text-align: center;
+		.title {
+			font-size: 34px;
+			line-height: 48px;
+			padding: 105px 24px 18px;
+			border: 8px solid $white;
+			display: inline-block;
+			position: relative;
+			border-top: none;
+		}
+		.paragraph {
+			font-size: 18px;
+			line-height: 30px;
+			&.paragraph-1 {
+				margin-top: 60px;
+				margin-bottom: 12px;
+			}
+			&.paragraph-2 {
+				margin-top: 20px;
+			}
+		}
+		.icons {
+			img {
+				margin: 0 15px;
+			}
+		}
+		.next-2 {
+			width: 260px;
+			height: 60px;
+			background-color: $white;
+			position: absolute;
+			top: calc(200vh - 60px);
+			left: calc(50vw - 130px);
+			color: $pink;
+			font-size: 26px;
+			line-height: 60px;
+		}
+	}
+
+	.screen-three {
+		background-color: $white;
+		width: 100%;
+		height: calc(100vh - 100px);
+		text-align: center;
+
+		.title {
+			color: $text-light;
+			font-size: 38px;
+			line-height: 48px;
+			padding: 150px 0px 20px;
+			border: 8px solid $pink;
+			display: inline-block;
+			border-top: none;
+			width: 260px;
+		}
+		.paragraph {
+			color: $text-light;
+			font-size: 18px;
+			line-height: 30px;
+			margin: 44px 0;
+		}
+		.email {
+			color: $pink;
+			font-size: 22px;
+			.icon-env {
+				font-size: 34px;
+				margin-right: 22px;
+			}
+		}
+	}
+
+	.footer {
+		background-color: $footer;
+		width: 100%;
+		height: 100px;
+		color: #c3c3c3;
+		line-height: 100px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 900px) {
+	.welcome {
+		.screen-two, .screen-three {
+			.title {
+				font-size: 30px;
+			}
+			.paragraph {
+				font-size: 16px;
+			}
+		}
+		.screen-three {
+			.email {
+				font-size: 18px;
+				.icon-env {
+					font-size: 28px;
+				}
+			}
+		}
+	}
+}

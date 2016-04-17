@@ -1,0 +1,44 @@
+.nav {
+	float: right;
+	margin-top: 47px;
+	font-size: 0;
+
+	.item {
+		font-size: 16px;
+		line-height: 18px;
+		color: $dark_letters;
+		padding: 13px 42px 12px;
+		background-color: rgba(255, 255, 255, 0.78);
+		display: inline-block;
+		&:hover {
+			color: $pink;
+			cursor: pointer;
+			background-color: rgba(255, 255, 255, 0.98);
+		}
+		&.active {
+			background-color: rgba(179, 107, 157, 0.78);
+			color: $white;
+			&:hover {
+				color: $white;
+				cursor: default;
+			}
+		}
+	}
+}
+
+@media (max-width: 1140px) {
+	.nav {
+		.item {
+			padding: 13px 36px 12px;
+		}
+	}
+}
+
+@media (max-width: 1060px) {
+	.nav {
+		.item {
+			font-size: 14px;
+			padding: 13px 30px 12px;
+		}
+	}
+}
