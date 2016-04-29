@@ -1,3 +1,61 @@
 // Place all the styles related to the photographs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.photographs {
+	.wrapper {
+		margin: 0 10px;
+	}
+	.photos {
+		margin: 0 auto;
+		text-align: center;
+		.photo {
+			width: 290px;
+			margin: 20px 10px;
+			display: inline-block;
+			img {
+				width: 100%;
+				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .5);
+				display: block;
+				border-radius: 2px;
+			}
+			&:hover {
+				box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, .4);
+				opacity: .94;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media (min-width: 1260px) {
+	.photographs {
+		.photos {
+			width: 1240px;
+		}
+	}
+}
+
+@media (max-width: 1259px) {
+	.photographs {
+		.photos {
+			width: 930px;
+		}
+	}
+}
+
+@media (max-width: 949px) {
+	.photographs {
+		.photos {
+			width: 620px;
+		}
+	}
+}
+
+@media (max-width: 639px) {
+	.photographs {
+		.photos {
+			width: 310px;
+		}
+	}
+}

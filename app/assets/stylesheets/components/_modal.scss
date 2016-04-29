@@ -1,0 +1,12 @@
+.modal {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background-color: rgba(197, 197, 197, .5);
+	.content {
+		width: 700px;
+		background-color: $white;
+		border-radius: 8px;
+		margin: 0 auto;
+	}
+}

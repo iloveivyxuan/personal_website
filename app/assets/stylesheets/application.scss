@@ -11,19 +11,26 @@
  * file per style scope.
  *
  * require_tree .
- *= require_self
+ * require_self
  */
 
-@import 'font-awesome';
+@import "font-awesome";
+@import "materialize/components/color";
+@import "materialize";
 
 @import "var";
 @import "components";
 @import "welcome";
+@import "photographs";
+@import "designs";
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 body {
  	margin: 0;
  	padding: 0;
- 	overflow: hidden;
  	background-color: $white;
  	transition: .5s;
  	&.moveOn{
@@ -36,4 +43,21 @@ body {
 
 a {
 	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
 }
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+* {
+	font-family: "Lato Regular", "PingFang SC", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.waves-effect .waves-ripple {
+	background-color: #B36B9D;
+}
+

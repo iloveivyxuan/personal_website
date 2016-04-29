@@ -1,0 +1,68 @@
+// Place all the styles related to the designs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.designs {
+	.wrapper {
+		margin: 0 20px;
+	}
+	.pictures {
+		margin: 0 auto;
+		.pic {
+			width: 232px;
+			margin: 12px 8px;
+			display: inline-block;
+			img {
+				width: 100%;
+				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .2);
+				display: block;
+				border-radius: 2px;
+			}
+			&:hover {
+				box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, .2);
+				opacity: .94;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.designs {
+		.pictures {
+			width: 1240px;
+		}
+	}
+}
+
+@media (max-width: 1279px) {
+	.designs {
+		.pictures {
+			width: 992px;
+		}
+	}
+}
+
+@media (max-width: 1031px) {
+	.designs {
+		.pictures {
+			width: 744px;
+		}
+	}
+}
+
+@media (max-width: 783px) {
+	.designs {
+		.pictures {
+			width: 496px;
+		}
+	}
+}
+
+@media (max-width: 535px) {
+	.designs {
+		.pictures {
+			width: 248px;
+		}
+	}
+}

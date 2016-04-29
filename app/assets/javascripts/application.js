@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require masonry-docs.min
+
+//= require jquery
+//= require bootstrap-sprockets
+//= require materialize-sprockets

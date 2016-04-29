@@ -1,18 +1,21 @@
-.letters
-  | Design & Program
 .banner
-  .next.next-1
-    = fa_icon 'chevron-down', class: "icon-down"
+  .next.next-1.waves-effect.waves-light
+    .content
+      | About Me
+      br
+      = fa_icon 'chevron-down', class: "icon-down"
   .arrows
     = fa_icon 'chevron-left', class: "icon-left"
     = fa_icon 'chevron-right', class: "icon-right"
   .logo
-    span.pink
+    span.logo-pink
       | Ivy
-    span.dark
+    span.logo-light
       | Xuan
   = render 'components/nav'
 .screen-two
+  .up.waves-effect.waves-light
+    = fa_icon 'chevron-up'
   .title
     | About Me
   .paragraph.paragraph-1
@@ -32,9 +35,14 @@
     |［比心］
     br
     |［再比一个心］
-  .next.next-2
-    = fa_icon 'chevron-down'
+  .next.next-2.waves-effect.waves-ripple
+    .content
+      | Contact
+      br
+      = fa_icon 'chevron-down', class: "icon-down"
 .screen-three
+  .up.up-2.waves-effect.waves-ripple
+    = fa_icon 'chevron-up'
   .title
     | contact
   .paragraph
@@ -54,6 +62,10 @@ coffee:
     $('body').css 'transform', 'translate(0, -100vh)'
   $('.next.next-2').on 'click', (e) ->
     $('body').css 'transform', 'translate(0, -200vh)'
+  $('.up').on 'click', (e) ->
+    $('body').css 'transform', 'translate(0, 0vh)'
+  $('.up.up-2').on 'click', (e) ->
+    $('body').css 'transform', 'translate(0, -100vh)'
 
 
   

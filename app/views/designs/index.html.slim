@@ -1,0 +1,35 @@
+.logo.page_name
+  span.logo-pink
+    | My
+  span.logo-dark
+    | Design
+= render 'components/nav'
+
+.wrapper
+  .pictures
+    .pic
+      = image_tag "design/1.jpg"
+    .pic
+      = image_tag "design/2.jpg"
+    .pic
+      = image_tag "design/6.jpg"
+    .pic
+      = image_tag "design/4.jpg"
+    .pic
+      = image_tag "design/5.jpg"
+    .pic
+      = image_tag "design/3.png"
+    .pic
+      = image_tag "design/7.png"
+    .pic
+      = image_tag "design/8.png"
+    .pic
+      = image_tag "design/9.jpg"
+= render 'components/modal'
+    
+
+coffee:
+  $grid = $('.pictures').masonry 
+    itemSelector: '.pic'
+  $grid.imagesLoaded().progress ->
+    $grid.masonry('layout')

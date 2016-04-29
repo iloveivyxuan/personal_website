@@ -3,18 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .welcome {
 	transition: 1s;
+	overflow: hidden;
 	.letters {
 		color: $pink;
 		font-size: 100px;
 		position: absolute;
-		top: calc(100vh - 190px);
-		left: 380px;
+		top: calc(100vh - 220px);
+		right: -240px;
 		width: 900px;
+		font-weight: 200;
 	}
 	.banner {
 		width: 100%;
 		height: 100vh;
-		background-image: asset-url('banner-1.jpg');
+		background-image: asset-url('banner-2.jpg');
 		background-position: 80% 0;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -34,8 +36,28 @@
 			margin-right: 38px;
 			margin-left: 54px;
 		}
+		&:hover {
+			background-color: rgba(255, 255, 255, 1);
+		}
 	}
-
+	.next {
+		.content {
+			color: rgba(255, 255, 255, .5);
+			font-size: 28px;
+			margin-top: 10px;
+			.icon-down {
+				color: rgba(255, 255, 255, .9);
+			}
+		}
+		&.next-2 {
+			.content {
+				color: rgba(179, 107, 157, .4)
+			}
+			.icon-down {
+				color: $pink;
+			}
+		}
+	}
 	.next-1 {
 		background-color: $pink;
 		width: 260px;
@@ -43,10 +65,9 @@
 		position: absolute;
 		display: inline-block;
 		top: calc(100vh - 90px);
-		left: 180px;
+		left: calc(50vw - 130px);
 		font-size: 26px;
 		color: $white;
-		line-height: 90px;
 		z-index: 999;
 		text-align: center;
 		&:hover {
@@ -60,20 +81,30 @@
 		background-color: $pink;
 		color: $white;
 		text-align: center;
+		.up {
+			padding: 90px 40px 18px;
+			border: 8px solid $white;
+			font-size: 28px;
+			display: inline-block;
+			border-top: none;
+			&:hover {
+				background-color: $light_pink;
+			}
+		}
 		.title {
 			font-size: 34px;
 			line-height: 48px;
-			padding: 105px 24px 18px;
-			border: 8px solid $white;
-			display: inline-block;
+			display: block;
 			position: relative;
 			border-top: none;
+			margin-top: 40px;
 		}
 		.paragraph {
 			font-size: 18px;
 			line-height: 30px;
+			font-weight: 200;
 			&.paragraph-1 {
-				margin-top: 60px;
+				margin-top: 30px;
 				margin-bottom: 12px;
 			}
 			&.paragraph-2 {
@@ -87,14 +118,19 @@
 		}
 		.next-2 {
 			width: 260px;
-			height: 60px;
+			height: 90px;
 			background-color: $white;
 			position: absolute;
-			top: calc(200vh - 60px);
+			top: calc(200vh - 90px);
 			left: calc(50vw - 130px);
 			color: $pink;
 			font-size: 26px;
-			line-height: 60px;
+
+			&:hover {
+				.content {
+					color: $pink;
+				}
+			}
 		}
 	}
 
@@ -103,22 +139,30 @@
 		width: 100%;
 		height: calc(100vh - 100px);
 		text-align: center;
-
+		.up {
+			padding: 80px 0px 20px;
+			border: 8px solid $pink;
+			display: inline-block;
+			color: $text-light;
+			border-top: none;
+			width: 276px;
+			font-size: 28px;
+			&:hover {
+				color: $pink;
+			}
+		}
 		.title {
 			color: $text-light;
 			font-size: 38px;
 			line-height: 48px;
-			padding: 150px 0px 20px;
-			border: 8px solid $pink;
-			display: inline-block;
 			border-top: none;
-			width: 260px;
+			margin-top: 50px
 		}
 		.paragraph {
 			color: $text-light;
 			font-size: 18px;
 			line-height: 30px;
-			margin: 44px 0;
+			margin: 34px 0;
 		}
 		.email {
 			color: $pink;
@@ -157,6 +201,39 @@
 					font-size: 28px;
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 610px) {
+	.welcome {
+		.screen-two, .screen-three {
+			padding: 0 30px;
+			.up {
+				padding-top: 60px;
+			}
+			.title {
+				font-size: 26px;
+				margin-top: 30px;
+			}
+			.paragraph {
+				font-size: 14px;
+				&.paragraph-1 {
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 540px) {
+	.welcome {
+		.screen-two .next-2 {
+			width: 220px;
+			left: calc(50vw - 110px);
+		}
+		.screen-three .up {
+			width: 236px;
 		}
 	}
 }

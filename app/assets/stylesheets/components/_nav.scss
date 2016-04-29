@@ -1,6 +1,6 @@
 .nav {
 	float: right;
-	margin-top: 47px;
+	margin-top: 42px;
 	font-size: 0;
 
 	.item {
@@ -10,13 +10,19 @@
 		padding: 13px 42px 12px;
 		background-color: rgba(255, 255, 255, 0.78);
 		display: inline-block;
+		&.last {
+			padding-right: 70px;
+		}
+		&.first {
+			padding-left: 60px;
+		}
 		&:hover {
 			color: $pink;
 			cursor: pointer;
 			background-color: rgba(255, 255, 255, 0.98);
 		}
 		&.active {
-			background-color: rgba(179, 107, 157, 0.78);
+			background-color: rgba(179, 107, 157, 1);
 			color: $white;
 			&:hover {
 				color: $white;
@@ -40,5 +46,10 @@
 			font-size: 14px;
 			padding: 13px 30px 12px;
 		}
+	}
+}
+@media (max-width: 920px) {
+	.nav {
+		display: none;
 	}
 }
