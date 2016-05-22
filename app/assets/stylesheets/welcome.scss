@@ -23,7 +23,7 @@
 	}
 
 	.arrows {
-		background-color: rgba(255, 255, 255, 0.6);
+		background-color: rgba(255, 255, 255, 0.7);
 		width: 180px;
 		height: 90px;
 		position: absolute;
@@ -32,12 +32,26 @@
 		line-height: 90px;
 		color: $pink;
 		z-index: 999;
+		cursor: pointer;
 		.icon-left {
-			margin-right: 38px;
-			margin-left: 54px;
+			padding: 32px 0px;
+			padding-left: 38px;
+			padding-right: 27px;
+			&:hover {
+				color: $light_pink;
+			}
+		}
+		.icon-right {
+			padding: 32px 0px;
+			padding-left: 27px;
+			padding-right: 50.42px;
+			&:hover {
+				color: $light_pink;
+			}
 		}
 		&:hover {
 			background-color: rgba(255, 255, 255, 1);
+			color: $pink;
 		}
 	}
 	.next {

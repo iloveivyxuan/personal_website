@@ -23,6 +23,8 @@
 @import "welcome";
 @import "photographs";
 @import "designs";
+@import "programs"; 
+@import "articles";
 
 
 @import "bootstrap-sprockets";
@@ -59,5 +61,8 @@ a {
 
 .waves-effect .waves-ripple {
 	background-color: #B36B9D;
+}
+.waves-effect .waves-lightPink {
+	background-color: #D880BD;
 }
 

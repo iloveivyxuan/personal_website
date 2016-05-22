@@ -7,25 +7,72 @@
 
 .wrapper
   .pictures
-    .pic
+    .pic.modal-trigger href="#pic1" data-target="pic1"
       = image_tag "design/1.jpg"
-    .pic
+    .pic.modal-trigger href="#pic2" data-target="pic2"
       = image_tag "design/2.jpg"
-    .pic
+    .pic.modal-trigger href="#pic3" data-target="pic3"
       = image_tag "design/6.jpg"
-    .pic
+    .pic.modal-trigger href="#pic4" data-target="pic4"
       = image_tag "design/4.jpg"
-    .pic
+    .pic.modal-trigger href="#pic5" data-target="pic5"
       = image_tag "design/5.jpg"
-    .pic
+    .pic.modal-trigger href="#pic6" data-target="pic6"
       = image_tag "design/3.png"
-    .pic
+    .pic.modal-trigger href="#pic7" data-target="pic7"
       = image_tag "design/7.png"
-    .pic
+    .pic.modal-trigger href="#pic8" data-target="pic8"
       = image_tag "design/8.png"
-    .pic
+    .pic.modal-trigger href="#pic9" data-target="pic9"
       = image_tag "design/9.jpg"
 = render 'components/modal'
+
+
+#pic1.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/1.jpg"
+#pic2.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/2.jpg"
+#pic3.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/6.jpg"
+#pic4.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/4.jpg"
+#pic5.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/5.jpg"
+#pic6.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/3.png"
+#pic7.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/7.png"
+#pic8.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/8.png"
+#pic9.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "design/9.jpg"
     
 
 coffee:
@@ -33,3 +80,9 @@ coffee:
     itemSelector: '.pic'
   $grid.imagesLoaded().progress ->
     $grid.masonry('layout')
+
+  $('.modal-trigger').leanModal 
+    dismissible: true,
+    opacity: .5,
+    in_duration: 300,
+    out_duration: 200,

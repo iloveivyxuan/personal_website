@@ -25,6 +25,25 @@
 			}
 		}
 	}
+	.modal {
+		width: 50%;
+		top: 0;
+		max-height: 100%;
+		overflow: auto;
+		border-radius: 6px;
+		background-color: rgba(0, 0, 0, .21);
+		.modal-content {
+			img {
+				width: 100%;
+			}
+			i.modal-close {
+				position: fixed;
+				right: -80px;
+				top: -30px;
+				font-size: 30px;
+			}
+		}
+	}
 }
 
 @media (min-width: 1280px) {

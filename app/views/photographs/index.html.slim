@@ -4,33 +4,93 @@
   span.logo-dark
     | Photographs
 = render 'components/nav'
+
 .wrapper
   .photos
-    .photo
+    .photo.modal-trigger href="#photo1" data-target="photo1"
       = image_tag 'photos/1.jpg'
-    .photo
+    .photo.modal-trigger href="#photo2" data-target="photo2"
       = image_tag 'photos/12.jpg'
-    .photo
+    .photo.modal-trigger href="#photo3" data-target="photo3"
       = image_tag 'photos/2.jpg'
-    .photo
+    .photo.modal-trigger href="#photo4" data-target="photo4"
       = image_tag 'photos/3.jpg'
-    .photo
+    .photo.modal-trigger href="#photo5" data-target="photo5"
       = image_tag 'photos/4.jpg'
-    .photo
+    .photo.modal-trigger href="#photo6" data-target="photo6"
       = image_tag 'photos/5.jpg'
-    .photo
+    .photo.modal-trigger href="#photo7" data-target="photo7"
       = image_tag 'photos/6.jpg'
-    .photo
+    .photo.modal-trigger href="#photo8" data-target="photo8"
       = image_tag 'photos/7.jpg'
-    .photo
+    .photo.modal-trigger href="#photo9" data-target="photo9"
       = image_tag 'photos/8.jpg'
-    .photo
+    .photo.modal-trigger href="#photo10" data-target="photo10"
       = image_tag 'photos/9.jpg'
-    .photo
+    .photo.modal-trigger href="#photo11" data-target="photo11"
       = image_tag 'photos/10.jpg'
-    .photo
+    .photo.modal-trigger href="#photo12" data-target="photo12"
       = image_tag 'photos/11.jpg'
-
+#photo1.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/1.jpg"
+#photo2.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/12.jpg"
+#photo3.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/2.jpg"
+#photo4.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/3.jpg"
+#photo5.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/4.jpg"
+#photo6.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/5.jpg"
+#photo7.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/6.jpg"
+#photo8.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/7.jpg"
+#photo9.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/8.jpg"
+#photo10.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/9.jpg"
+#photo11.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/10.jpg"
+#photo12.modal
+  .modal-content
+    i.material-icons.right.btn-flat.modal-action.modal-close
+      | close
+    = image_tag "photos/11.jpg"
 
 coffee:
   $grid = $('.photos').masonry 
@@ -38,4 +98,8 @@ coffee:
   $grid.imagesLoaded().progress ->
     $grid.masonry('layout')
 
-    
+  $('.modal-trigger').leanModal 
+    dismissible: true,
+    opacity: .5,
+    in_duration: 300,
+    out_duration: 200,

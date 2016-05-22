@@ -1,11 +1,11 @@
 .nav
   = link_to root_path, class:"item waves-effect waves-ripple first #{controller_name == "welcome" ? 'active' : ''}"
     | Home
-  .item.waves-effect.waves-ripple
+  = link_to articles_path, class:"item waves-effect waves-ripple #{controller_name == "articles" ? 'active' : ''}"
     | Words
   = link_to photographs_path, class:"item waves-effect waves-ripple #{controller_name == "photographs" ? 'active' : ''}"
     | Photograph
   = link_to designs_path, class:"item waves-effect waves-ripple #{controller_name == "designs" ? 'active' : ''}"
     | Design
-  .item.last.waves-effect.waves-ripple
+  = link_to programs_path, class:"item waves-effect waves-ripple #{controller_name == "programs" ? 'active' : ''}"
     | Program

@@ -1,0 +1,32 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.articles {
+	.wrap {
+		width: 100%;
+		padding: 0 50px;
+		.card {
+			width: 40%;
+			.card-image {
+				width: 100%;
+			}
+			.card-content {
+				i {
+					line-height: 48px;
+				}
+			}
+			.card-reveal {
+				p {
+					margin-top: 10px;
+					line-height: 24px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 980px) {
+
+}

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :photographs, only: [:index, :show]
   resources :designs, only: [:index, :show]
+  resources :articles, only: [:index, :show]
+  resources :programs, only: [:index]
   #get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
